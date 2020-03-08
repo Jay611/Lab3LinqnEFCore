@@ -1,0 +1,35 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Question3"
+        xmlns:Models="clr-namespace:BookClassLibrary.Models;assembly=BookClassLibrary" x:Class="Question3.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Window.Resources>
+        <CollectionViewSource x:Key="titlesViewSource"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource titlesViewSource}">
+        <DataGrid x:Name="titlesDataGrid" Height="380" Width="560" HorizontalAlignment="Left" Margin="10"
+                  ItemsSource="{Binding}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="TitleColumn" Width="380" Header="Title" Binding="{Binding Title}"/>
+                <DataGridTextColumn x:Name="AuthorLastnameColumn" Width="70" Header="Last Name" Binding="{Binding AuthorLastname}"/>
+                <DataGridTextColumn x:Name="AuthorFirstnameColumn" Width="70" Header="First Name" Binding="{Binding AuthorFirstname}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Sort the results by title" Margin="600,30,10.333,360.667" Height="30"/>
+        <Button 
+            x:Name="SortByTitleButton" Click="SortByTitleButton_Click"
+            Content="Sort By Title" HorizontalAlignment="Left" Margin="600,60,0,0" VerticalAlignment="Top" Height="30" Width="150"/>
+        <Label Content="Sort the results &#xD;&#xA;by title and author" Margin="600,120,10.333,245.667"/>
+        <Button 
+            x:Name="SortByTitleAndAuthorButton" Click="SortByTitleAndAuthorButton_Click"
+            Content="Sort By Title And Author" HorizontalAlignment="Left" Margin="600,170,0,0" VerticalAlignment="Top" Height="30" Width="150"/>
+        <Label Content="Group the results &#xD;&#xA;by title and author" Margin="600,230,10.333,140.667"/>
+        <Button 
+            x:Name="GroupByTitleAndAuthorButton" Click="SortByTitleAndAuthorButton_Click"
+            Content="Group By Title And Author" HorizontalAlignment="Left" Margin="600,280,0,0" VerticalAlignment="Top" Height="30" Width="150"/>
+    </Grid>
+</Window>

@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{47A7DD41-EEF6-4429-873F-B619DA3A3467}</ProjectGuid>
+    <ProjectGuid>{6987978A-596D-4796-96E0-37D1629F4E8D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PlayerClassLibrary</RootNamespace>
-    <AssemblyName>PlayerClassLibrary</AssemblyName>
+    <RootNamespace>BookClassLibrary</RootNamespace>
+    <AssemblyName>BookClassLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -138,8 +138,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\BaseballDBContext.cs" />
-    <Compile Include="Models\Players.cs" />
+    <Compile Include="Models\AuthorIsbn.cs" />
+    <Compile Include="Models\Authors.cs" />
+    <Compile Include="Models\BooksContext.cs" />
+    <Compile Include="Models\Titles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
